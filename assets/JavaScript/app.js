@@ -25,7 +25,7 @@ function getCityResults()
 {
   $(".results").html("");
 
-  var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=N5OKJJ5Kx7gKlaYEZha1x3zZvZli3Wwd&limit=5");
+  var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=N5OKJJ5Kx7gKlaYEZha1x3zZvZli3Wwd&limit=5");
   xhr.done(function(data) { console.log("success got data", data); });
 
   var returnedObject = $.get(xhr);
