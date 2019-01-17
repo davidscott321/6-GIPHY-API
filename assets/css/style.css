@@ -2,3 +2,12 @@ button
 {
   margin: 5px 10px;
 }
+.column
+{
+  text-align: center;
+  float: left;
+}
+img
+{
+  margin: 5px;
+}
