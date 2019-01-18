@@ -47,10 +47,7 @@ function getCityResults()
         var rating = data.data[i].rating;
         var imageURL = data.data[i].images.fixed_width_still.url;
 
-        $(".results").append("<div class='column'>Rating: "+rating+"<br><img src='"+imageURL+"'></div>");
-        // $(".results").append($("<div class='"+data.data[i].id+">"));
-        // $("#"+data.data[i].id).append($(src)).append($(rating));
-        // $("#"+"rating"+data.data[i].id).text("Rated "+data.data[i].rating.toUpperCase());
+        $(".results").append("<div class='column'>Rating: "+rating+"<br><img src='"+imageURL+"' id='"+i+"' static='true'></div>");
       }
 
       $("img").on("click", function(){
