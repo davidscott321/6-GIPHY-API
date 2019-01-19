@@ -1,7 +1,7 @@
 $(document).ready(function(){
   generatePlaces();
 
-  $(".btn").on("click",getCityResults);
+  $(".btn-secondary").on("click",addTopic);
 });
 
 var xhr;
@@ -14,12 +14,14 @@ var topics = ["Chicago, Illinois","New York, New York","San Francisco, Californi
 
 function generatePlaces()
 {
+  $(".buttons").html("");
   for (i=0;i<topics.length;i++)
   {
     button = "<button class='btn btn-primary' id='"+topics[i]+"'>"+topics[i];
 
     $(".buttons").append($(button).text(topics[i]));
   }
+  $(".btn-primary").on("click",getCityResults);
 }
 
 function getCityResults() 
@@ -70,4 +72,11 @@ function getCityResults()
       });
     }
   });    
+}
+
+function addTopic()
+{
+  topics.push($('#locationInput').val());
+  $('#locationInput').val("");
+  generatePlaces();
 }
